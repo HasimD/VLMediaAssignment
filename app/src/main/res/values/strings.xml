@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VLMedia</string>
+    <string name="last_known_location">Last known location:</string>
 </resources>

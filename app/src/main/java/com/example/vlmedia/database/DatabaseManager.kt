@@ -1,6 +1,7 @@
 package com.example.vlmedia.database
 
 import android.content.Context
+import com.example.vlmedia.main.MainViewModel
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
@@ -8,8 +9,7 @@ import java.io.IOException
 
 object DatabaseManager {
 
-    fun loadDatabase(context: Context) {
-        val charDao = AppRoomDatabase.getDatabase(context).charDao()
+    fun loadDatabase(context: Context, viewModel: MainViewModel) {
         val client = OkHttpClient()
 
         // request for Game List
@@ -31,7 +31,7 @@ object DatabaseManager {
                         val id = jsonCharacter.getString("id")
 
                         // if nothing is new, then skip.
-                        if (charDao.getCharacterById(id).value != null) {
+                        if (viewModel.getCharacterById(id) != null) {
                             continue
                         }
 
@@ -41,7 +41,7 @@ object DatabaseManager {
                         val location =
                             JSONObject(jsonCharacter.getString("location")).getString("name")
 
-                        charDao.addCharacter(Character(id, name, image, status, location))
+                        viewModel.addCharacter(Character(id, name, image, status, location))
                     }
                 }
             } catch (exception: Exception) {

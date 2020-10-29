@@ -1,13 +1,16 @@
 package com.example.vlmedia.main.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vlmedia.R
+import com.example.vlmedia.character.CharacterView
 import com.example.vlmedia.database.Character
 import com.example.vlmedia.main.MainViewModel
+import com.example.vlmedia.utils.Cache
 import com.example.vlmedia.utils.CommonUtils
 
 class MainAdapter(
@@ -27,7 +30,11 @@ class MainAdapter(
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
         val character = charList[position]
 
-        holder.row.setOnClickListener { }
+        holder.row.setOnClickListener {
+            Cache.currentCharacter = character
+            val intent = Intent(activity, CharacterView::class.java)
+            activity.startActivity(intent)
+        }
         holder.image.apply { CommonUtils.loadImageByGlide(character.image, this, activity) }
         holder.name.text = character.name
     }

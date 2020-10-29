@@ -1,6 +1,5 @@
 package com.example.vlmedia.database
 
-import android.content.Context
 import com.example.vlmedia.main.MainViewModel
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -9,7 +8,7 @@ import java.io.IOException
 
 object DatabaseManager {
 
-    fun loadDatabase(context: Context, viewModel: MainViewModel) {
+    fun loadDatabase(viewModel: MainViewModel) {
         val client = OkHttpClient()
 
         // request for Game List

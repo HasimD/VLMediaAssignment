@@ -31,7 +31,7 @@ class MainView : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        DatabaseManager.loadDatabase(this, viewModel)
+        DatabaseManager.loadDatabase(viewModel)
         viewModel.loadData()
     }
 }

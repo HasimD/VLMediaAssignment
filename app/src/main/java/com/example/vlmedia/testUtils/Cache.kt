@@ -1,4 +1,4 @@
-package com.example.vlmedia.utils
+package com.example.vlmedia.testUtils
 
 import com.example.vlmedia.database.Character
 

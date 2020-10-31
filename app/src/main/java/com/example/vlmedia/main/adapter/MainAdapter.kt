@@ -10,8 +10,8 @@ import com.example.vlmedia.R
 import com.example.vlmedia.character.CharacterView
 import com.example.vlmedia.database.Character
 import com.example.vlmedia.main.MainViewModel
-import com.example.vlmedia.utils.Cache
-import com.example.vlmedia.utils.CommonUtils
+import com.example.vlmedia.testUtils.Cache
+import com.example.vlmedia.testUtils.CommonUtils
 
 class MainAdapter(
     private val viewModel: MainViewModel,

@@ -3,8 +3,8 @@ package com.example.vlmedia.character
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vlmedia.R
-import com.example.vlmedia.utils.Cache
-import com.example.vlmedia.utils.CommonUtils
+import com.example.vlmedia.testUtils.Cache
+import com.example.vlmedia.testUtils.CommonUtils
 import kotlinx.android.synthetic.main.character.*
 
 class CharacterView : AppCompatActivity() {

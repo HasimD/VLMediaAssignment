@@ -8,9 +8,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Rule
 import org.mockito.Mock
-import org.mockito.Mockito
-import org.mockito.Mockito.mock
-import org.mockito.Mockito.spy
+import org.mockito.Mockito.*
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -35,7 +33,7 @@ class MainViewModelTest : AppUnitTestSuite() {
     @Test
     fun shouldLoadData() = coroutineScope.runBlockingTest {
         val list = listOf(mock(Character::class.java))
-        Mockito.doReturn(list).`when`(repository).getCharacterList()
+        doReturn(list).`when`(repository).getCharacterList()
 
         viewModel.loadData()
         assertEquals(list, viewModel.characterList.value)
@@ -44,7 +42,7 @@ class MainViewModelTest : AppUnitTestSuite() {
     @Test
     fun shouldGetData() = coroutineScope.runBlockingTest {
         val character = mock(Character::class.java)
-        Mockito.doReturn(character).`when`(repository).getCharacterById("characterId")
+        doReturn(character).`when`(repository).getCharacterById("characterId")
 
         val characterFromViewModel = viewModel.getCharacterById("characterId")
 

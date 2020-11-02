@@ -7,9 +7,9 @@ import com.example.vlmedia.testUtils.MainCoroutineScopeRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Rule
+import org.junit.Test
 import org.mockito.Mock
 import org.mockito.Mockito.*
-import kotlin.test.Test
 import kotlin.test.assertEquals
 
 @ExperimentalCoroutinesApi

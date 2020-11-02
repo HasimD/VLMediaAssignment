@@ -1,13 +1,13 @@
 package com.example.vlmedia
 
+import org.junit.Before
 import org.mockito.MockitoAnnotations
-import kotlin.test.BeforeTest
 
 abstract class AppUnitTestSuite {
 
     abstract fun setUpBefore()
 
-    @BeforeTest
+    @Before
     fun setUp() {
         MockitoAnnotations.openMocks(this)
         setUpBefore()

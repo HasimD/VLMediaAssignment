@@ -7,10 +7,10 @@ import android.widget.TextView
 import com.example.vlmedia.AppUnitTestSuite
 import com.example.vlmedia.R
 import com.example.vlmedia.main.adapter.MainViewHolder
+import org.junit.Test
 import org.mockito.Mock
 import org.mockito.Mockito.doReturn
 import org.mockito.Mockito.mock
-import kotlin.test.Test
 import kotlin.test.assertFailsWith
 
 class MainViewHolderTest : AppUnitTestSuite() {

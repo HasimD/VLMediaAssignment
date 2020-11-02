@@ -2,6 +2,7 @@ package com.example.vlmedia.character
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.vlmedia.R
 import com.example.vlmedia.testUtils.Cache
 import com.example.vlmedia.testUtils.CommonUtils
@@ -28,7 +29,13 @@ class CharacterView : AppCompatActivity() {
         }
 
         textView_name.text = character!!.name
-        textView_status.text = character.status
+        textView_status.apply {
+            text = character.status
+            when (character.status) {
+                "Alive" -> setTextColor(ContextCompat.getColor(this@CharacterView, R.color.alive))
+                "Dead" -> setTextColor(ContextCompat.getColor(this@CharacterView, R.color.dead))
+            }
+        }
         textView_location.text = character.location
         imageView_char.apply {
             CommonUtils.loadImageByGlide(

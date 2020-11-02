@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "295955011356",
+    "firebase_url": "https://vlmedia.firebaseio.com",
+    "project_id": "vlmedia",
+    "storage_bucket": "vlmedia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295955011356:android:1a13e3ebaa1d5b80b20cd9",
+        "android_client_info": {
+          "package_name": "com.example.vlmedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295955011356-v3jkpaq6hgi00a8m1f9gg0o3ec4ojul2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vlmedia",
+            "certificate_hash": "fa532c05860805783a065f0fe374f7386c8ff14d"
+          }
+        },
+        {
+          "client_id": "295955011356-6le62i36g6fjab14imeslblbk3o4u70a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD37rJEXfZXzrzimxrfqAIBEhP2AW7TUyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295955011356-6le62i36g6fjab14imeslblbk3o4u70a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

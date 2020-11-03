@@ -1,6 +1,7 @@
 package com.example.vlmedia.character
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.vlmedia.R
@@ -44,5 +45,15 @@ class CharacterView : AppCompatActivity() {
                     this@CharacterView
             )
         }
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> finish()
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }
